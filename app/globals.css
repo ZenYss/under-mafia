@@ -1,0 +1,336 @@
+@import "tailwindcss";
+
+
+:root {
+  --background: #040805;
+  --foreground: #f4fff8;
+
+  --primary: #39ff14;
+  --card: #080d09;
+  --border: rgba(57,255,20,.12);
+}
+
+
+@theme inline {
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+
+}
+
+
+
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+body {
+
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(57,255,20,.08),
+      transparent 40%
+    ),
+    #040805;
+
+  color: var(--foreground);
+
+  min-height: 100vh;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+}
+
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+
+button {
+  cursor: pointer;
+}
+
+
+
+
+
+/* SELECTION */
+
+::selection {
+
+  background: #39ff14;
+
+  color: black;
+
+}
+
+
+
+
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+
+  width: 8px;
+
+}
+
+
+
+::-webkit-scrollbar-track {
+
+  background: #050805;
+
+}
+
+
+
+::-webkit-scrollbar-thumb {
+
+  background: rgba(57,255,20,.7);
+
+  border-radius: 999px;
+
+}
+
+
+
+
+
+/* NEON TEXT */
+
+.neon {
+
+  color: #39ff14;
+
+  text-shadow:
+
+    0 0 5px rgba(57,255,20,.5),
+
+    0 0 15px rgba(57,255,20,.35);
+
+}
+
+
+
+
+
+/* BUTTON */
+
+.neon-button {
+
+  background: #39ff14;
+
+  color: #041004;
+
+  border-radius: 14px;
+
+  transition: .25s;
+
+
+  box-shadow:
+
+    0 0 15px rgba(57,255,20,.25);
+
+}
+
+
+
+.neon-button:hover {
+
+  transform: translateY(-2px);
+
+
+  box-shadow:
+
+    0 0 25px rgba(57,255,20,.45);
+
+}
+
+
+
+
+
+/* CYBER GRID */
+
+.cyber-grid {
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+
+  background-image:
+
+    linear-gradient(
+      rgba(57,255,20,.035) 1px,
+      transparent 1px
+    ),
+
+    linear-gradient(
+      90deg,
+      rgba(57,255,20,.035) 1px,
+      transparent 1px
+    );
+
+
+  background-size:
+
+    70px 70px;
+
+
+  mask-image:
+
+    radial-gradient(
+      circle at center,
+      black,
+      transparent 75%
+    );
+
+
+  opacity: .12;
+
+}
+
+
+
+
+
+/* ENTER ANIMATION */
+
+.animate-enter {
+
+  opacity: 0;
+
+  transform: translateY(25px);
+
+  animation:
+    enter .8s ease forwards;
+
+}
+
+
+
+.animate-delay-1 {
+
+  animation-delay: .15s;
+
+}
+
+
+
+.animate-delay-2 {
+
+  animation-delay: .3s;
+
+}
+
+
+
+.animate-delay-3 {
+
+  animation-delay: .45s;
+
+}
+
+
+
+@keyframes enter {
+
+
+  from {
+
+    opacity: 0;
+
+    transform: translateY(25px);
+
+  }
+
+
+  to {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+
+}
+
+
+
+
+
+/* HERO GLOW */
+
+.animate-glow {
+
+  animation:
+    glowMove 8s ease-in-out infinite;
+
+}
+
+
+
+@keyframes glowMove {
+
+
+  0% {
+
+    transform:
+      translateX(-50%)
+      translateY(0);
+
+    opacity: .7;
+
+  }
+
+
+
+  50% {
+
+    transform:
+      translateX(-50%)
+      translateY(-25px);
+
+    opacity: 1;
+
+  }
+
+
+
+  100% {
+
+    transform:
+      translateX(-50%)
+      translateY(0);
+
+    opacity: .7;
+
+  }
+
+}
