@@ -3,6 +3,7 @@ type ProductCardProps = {
   description: string;
   price: string;
   category: string;
+  checkoutUrl: string;
 };
 
 
@@ -11,6 +12,7 @@ export default function ProductCard({
   description,
   price,
   category,
+  checkoutUrl,
 }: ProductCardProps) {
 
   return (
@@ -32,7 +34,6 @@ export default function ProductCard({
       "
     >
 
-
       {/* hover glow */}
 
       <div
@@ -53,7 +54,6 @@ export default function ProductCard({
       />
 
 
-
       <div
         className="
         relative
@@ -63,7 +63,6 @@ export default function ProductCard({
         h-full
         "
       >
-
 
         <p
           className="
@@ -77,8 +76,6 @@ export default function ProductCard({
         </p>
 
 
-
-
         <h3
           className="
           mt-5
@@ -88,8 +85,6 @@ export default function ProductCard({
         >
           {title}
         </h3>
-
-
 
 
         <p
@@ -103,8 +98,6 @@ export default function ProductCard({
         >
           {description}
         </p>
-
-
 
 
 
@@ -128,9 +121,10 @@ export default function ProductCard({
           </span>
 
 
-
-
-          <button
+          <a
+            href={checkoutUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="
             rounded-xl
             px-5
@@ -144,8 +138,8 @@ export default function ProductCard({
             hover:border-green-400/40
             "
           >
-            Wybierz
-          </button>
+            Kup teraz
+          </a>
 
 
         </div>
