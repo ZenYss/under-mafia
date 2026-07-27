@@ -9,7 +9,7 @@ export default function FeaturedProducts() {
         "Podstawowy pakiet Discord Steam i FiveM Ready żeby się odbanować i wrócić do gry!",
       price: "1,50 zł",
       category: "Accounts",
-      checkoutUrl: "#",
+      checkoutUrl: "/products/fivem-bundle",
     },
 
     {
@@ -18,7 +18,7 @@ export default function FeaturedProducts() {
         "Co otrzymujesz? • Wysokiej jakości Spoofer",
       price: "30zł",
       category: "Sp00fer",
-      checkoutUrl: "#",
+      checkoutUrl: "/products/cleanex",
     },
 
     {
@@ -27,7 +27,7 @@ export default function FeaturedProducts() {
         "dostajecie cheata z niewykrywalnymi opcjami pod pvp!",
       price: "15-70 zł",
       category: "Cheats",
-      checkoutUrl: "#",
+      checkoutUrl: "/products/lynx",
     },
   ];
 
@@ -46,7 +46,9 @@ export default function FeaturedProducts() {
 
       <div className="w-full">
 
+
         <div className="mb-24">
+
 
           <p
             className="
@@ -60,6 +62,7 @@ export default function FeaturedProducts() {
           </p>
 
 
+
           <h2
             className="
             mt-6
@@ -68,6 +71,7 @@ export default function FeaturedProducts() {
             font-black
             "
           >
+
             Wybierz swój Ulubiony
 
             <span className="neon">
@@ -75,6 +79,7 @@ export default function FeaturedProducts() {
             </span>
 
           </h2>
+
 
 
           <p
@@ -90,7 +95,10 @@ export default function FeaturedProducts() {
             szybkości.
           </p>
 
+
         </div>
+
+
 
 
         <div
