@@ -1,138 +1,22 @@
 export default function FAQ() {
-
-  const questions = [
-    {
-      question: "Jak wygląda zakup produktu?",
-      answer:
-        "Wybierasz produkt, przechodzisz przez proces zakupu i otrzymujesz informacje dotyczące realizacji."
-    },
-
-    {
-      question: "Jak szybko otrzymam produkt?",
-      answer:
-        "Realizacja odbywa się możliwie szybko po poprawnym zakończeniu zakupu."
-    },
-
-    {
-      question: "Czy mogę uzyskać pomoc?",
-      answer:
-        "Tak. Nasza społeczność i obsługa pomogą Ci w przypadku pytań."
-    },
-
-    {
-      question: "Gdzie znajdę aktualności?",
-      answer:
-        "Najnowsze informacje i aktualizacje znajdziesz w naszej społeczności."
-    },
+  const qs = [
+    { q: "Jak wygląda zakup?", a: "Wybierz produkt → Płatność (BLIK/Karta/PayPal) → Instant delivery na e-mail + Discord. Jak na SellAuth." },
+    { q: "Jak szybko dostanę produkt?", a: "Automatycznie <2 min. W razie problemu support odpowiada średnio w 7 min." },
+    { q: "Czy mogę uzyskać pomoc?", a: "Tak — Discord ticket 24/7 + FAQ + video poradniki." },
+    { q: "Gdzie znajdę aktualności?", a: "Na Discordzie i w zakładce Aktualności. Dropy co tydzień." },
   ];
-
-
   return (
-    <section
-      className="
-      relative
-      w-full
-      px-6
-      lg:px-16
-      py-24
-      "
-    >
-
-      <div
-        className="
-        w-full
-        "
-      >
-
-
-        <p
-          className="
-          text-green-400
-          uppercase
-          tracking-[0.45em]
-          text-sm
-          "
-        >
-          FAQ
-        </p>
-
-
-
-
-        <h2
-          className="
-          mt-5
-          text-4xl
-          md:text-6xl
-          font-black
-          "
-        >
-          Najczęściej zadawane
-
-          <span className="neon">
-            {" "}pytania
-          </span>
-
-        </h2>
-
-
-
-
-        <div
-          className="
-          mt-12
-          grid
-          gap-5
-          max-w-4xl
-          "
-        >
-
-          {questions.map((item) => (
-
-            <div
-              key={item.question}
-              className="
-              rounded-2xl
-              border
-              border-green-400/10
-              bg-[#070b08]
-              p-6
-              transition
-              hover:border-green-400/30
-              "
-            >
-
-              <h3
-                className="
-                text-xl
-                font-bold
-                "
-              >
-                {item.question}
-              </h3>
-
-
-              <p
-                className="
-                mt-3
-                text-gray-400
-                leading-relaxed
-                "
-              >
-                {item.answer}
-              </p>
-
-
-            </div>
-
-          ))}
-
-        </div>
-
-
+    <section className="w-full max-w-[1280px] mx-auto px-4 lg:px-8 py-10">
+      <p className="text-[11px] tracking-[0.3em] text-[#39ff14] font-bold">FAQ</p>
+      <h2 className="mt-2 text-3xl md:text-4xl font-black">Najczęściej <span className="neon">pytania</span></h2>
+      <div className="mt-6 grid gap-3 max-w-4xl">
+        {qs.map((i) => (
+          <div key={i.q} className="rounded-2xl bg-[#111113] border border-white/[0.06] p-5 hover:border-white/10 transition">
+            <h3 className="font-bold">{i.q}</h3>
+            <p className="mt-2 text-sm text-white/45 leading-relaxed">{i.a}</p>
+          </div>
+        ))}
       </div>
-
-
     </section>
   );
 }
